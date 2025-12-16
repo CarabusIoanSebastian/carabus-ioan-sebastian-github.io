@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Criptografia clasică — Ioan‑Sebastian CĂRĂBUȘ</title>
+  <style>
+    :root{--bg:#f7f8fb;--card:#ffffff;--accent:#0b5cff;--muted:#6b7280;--maxw:980px}
+    *{box-sizing:border-box}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#0f172a}
+    header{background:linear-gradient(90deg,#fff 0%,#f1f5f9 100%);border-bottom:1px solid #e6eef8}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:20px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand h1{font-size:20px;margin:0}
+    nav{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--accent);background:transparent;border:1px solid transparent}
+    nav a.active{background:var(--accent);color:#fff}
+
+    main{max-width:var(--maxw);margin:22px auto;padding:18px}
+    .card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(11,92,255,0.05)}
+    h2{margin:0 0 12px}
+    h3{margin:18px 0 8px}
+    p{line-height:1.6;margin:8px 0}
+    .toc ul{padding-left:18px}
+    footer{max-width:var(--maxw);margin:20px auto;padding:12px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* page navigation */
+    .pager{display:flex;gap:8px;justify-content:space-between;margin-top:18px}
+    .btn{background:transparent;border:1px solid #e2e8f0;padding:8px 12px;border-radius:8px;cursor:pointer}
+
+    /* responsive */
+    @media (max-width:640px){.wrap{padding:12px}.brand h1{font-size:16px}}
+
+    /* print */
+    @media print{nav, .pager, header, footer{display:none}body{background:#fff}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <div style="width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#0b5cff,#60a5fa);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">CR</div>
+        <div>
+          <h1>Criptografia clasică — Proiect de atestat</h1>
+          <div style="font-size:13px;color:var(--muted)">Ioan‑Sebastian CĂRĂBUȘ — Colegiul Național „Petru Rareș”</div>
+        </div>
+      </div>
+      <nav id="topnav" aria-label="Navigație principală">
+        <a href="#cover" data-route="cover">Copertă</a>
+        <a href="#toc" data-route="toc">Cuprins</a>
+        <a href="#argument" data-route="argument">Argumentare</a>
+        <a href="#capitol-1" data-route="capitol-1">Capitolul 1</a>
+        <a href="#capitol-2" data-route="capitol-2">Capitolul 2</a>
+        <a href="#capitol-3" data-route="capitol-3">Capitolul 3</a>
+        <a href="#webografie" data-route="webografie">Webografie</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div id="app" class="card">
+      <!-- content will be injected here -->
+    </div>
+  </main>
+
+  <footer>
+    Document generat din fișierul original. Utilizați butoanele din navigație pentru a accesa fiecare capitol.
+  </footer>
+
+  <!-- templates for pages -->
+  <template id="tpl-cover">
+    <h2>Copertă</h2>
+    <p><strong>Ministerul Educației</strong></p>
+    <p><strong>Colegiul Național „Petru Rareș”</strong></p>
+    <p style="margin-top:18px"><strong>Proiect de atestat</strong></p>
+    <h3>Criptografia clasică</h3>
+    <p>Coordonator: Prof. Marius Ududec</p>
+    <p>Absolvent: Ioan‑Sebastian CĂRĂBUȘ — Clasa a XII‑a F</p>
+  </template>
+
+  <template id="tpl-toc">
+    <h2>Cuprins</h2>
+    <div class="toc">
+      <ul>
+        <li>Argumentarea alegerii temei</li>
+        <li><a href="#capitol-1">Capitolul 1: Originea și Evoluția Criptografiei Clasice</a>
+          <ul>
+            <li>Primele metode de criptare: cifruri de transpoziție</li>
+            <li>Cifruri clasice: Cifrul lui Caesar, Vigenère</li>
+          </ul>
+        </li>
+        <li><a href="#capitol-2">Capitolul 2: Începuturile criptografiei moderne</a>
+          <ul>
+            <li>Mașina Enigma</li>
+            <li>Hagelin C‑35/C‑36</li>
+          </ul>
+        </li>
+        <li><a href="#capitol-3">Capitolul 3: Criptografia modernă</a>
+          <ul>
+            <li>Claude Shannon și teoria informației</li>
+            <li>Hash-uri</li>
+          </ul>
+        </li>
+        <li>Webografie</li>
+      </ul>
+    </div>
+  </template>
+
+  <template id="tpl-argument">
+    <h2>Argumentarea alegerii temei</h2>
+    <p>Am ales să abordez tema criptografiei deoarece aceasta a avut o influență enormă asupra istoriei umane. Încă din cele mai vechi timpuri a existat o nevoie de a transmite informație fără a putea fi citită sau interpretată de părți terțe. Criptografia poate varia de la cuvinte cu sens dublu, până la cifruri complexe, bazate pe operații matematice, care nu pot fi sparte decât cu ajutorul calculatoarelor.</p>
+    <p>Criptografia există la intersecția dintre disciplinele matematicii, securității informațiilor, ingineriei electrice, procesării semnalelor digitale, fizicii și altele. Conceptele de bază legate de securitatea informațiilor (confidențialitatea datelor, integritatea datelor, autentificarea și non‑repudierea) sunt, de asemenea, esențiale pentru criptografie. Aplicațiile practice ale criptografiei includ comerțul electronic, cardurile de plată bazate pe cip, monedele digitale, parolele computerelor și comunicațiile militare.</p>
+  </template>
+
+  <template id="tpl-capitol-1">
+    <h2>Capitolul 1 — Originea și Evoluția Criptografiei Clasice</h2>
+    <p>Istoria criptografiei începe cu nevoia oamenilor de a ascunde sensul mesajelor într-un mod care să fie accesibil doar celor inițiați. În primele civilizații, comunicarea secretă era un instrument militar și politic esențial, folosit pentru a proteja informații strategice.</p>
+
+    <h3>Primele metode: cifruri de transpoziție</h3>
+    <p>Primele metode de criptare cunoscute sunt cifrurile de transpoziție, în care ordinea literelor dintr-un mesaj este modificată conform unei reguli prestabilite. Un exemplu istoric este scitalul spartan: o bandă înfășurată în jurul unui baston pentru a ascunde textul.</p>
+
+    <h3>Cifruri clasice: Cifrul lui Caesar</h3>
+    <p>Unul dintre cele mai vechi și celebre cifruri de substituție este Cifrul lui Caesar. Principiul său: fiecare literă este înlocuită cu o literă aflată la o distanță fixă în alfabet. Matematic: C = (P + k) mod 26.</p>
+
+    <h3>Cifrul lui Vigenère</h3>
+    <p>Cheia polialfabetică a Vigenère introduce variabilitate în deplasările literelor, folosind un cuvânt‑cheie repetat pe lungimea textului. A fost considerat cândva indescifrabil până la metoda lui Kasiski (1863).</p>
+  </template>
+
+  <template id="tpl-capitol-2">
+    <h2>Capitolul 2 — Începuturile criptografiei moderne</h2>
+
+    <h3>Mașina Enigma</h3>
+    <p>Mașina Enigma, inventată de Arthur Scherbius, a folosit rotoare electrice și un plugboard pentru a obține o substituție foarte complexă. A fost adoptată de forțele armate germane în prima jumătate a secolului XX și a fost spartă datorită muncii matematicienilor polonezi și britanici (Rejewski, Różycki, Zygalski, Alan Turing și echipa de la Bletchley Park).</p>
+
+    <h3>Hagelin C‑35 / C‑36</h3>
+    <p>Mașinile Hagelin, proiectate de Boris Hagelin, au fost sisteme portabile bazate pe pinwheels (roți cu pini) și bare mobile care au generat deplasări variabile. Modelele C‑35 și C‑36 au fost folosite pe scară largă și au reprezentat un pas important în miniaturizarea dispozitivelor criptografice.</p>
+  </template>
+
+  <template id="tpl-capitol-3">
+    <h2>Capitolul 3 — Criptografia modernă</h2>
+
+    <h3>Claude Shannon și teoria informației</h3>
+    <p>Claude E. Shannon a formalizat teoria informației și a demonstrat conceptele fundamentale aplicabile criptografiei: entropia, redundanța limbajului și securitatea perfectă (One‑Time Pad) — principiile care au transformat criptografia într‑o disciplină științifică.</p>
+
+    <h3>Hash‑uri</h3>
+    <p>Funcțiile hash introduc o amprentă digitală de lungime fixă pentru date de orice lungime și sunt folosite pentru verificarea integrității, stocarea parolelor, semnături digitale și în blockchain. Proprietăți esențiale: rezistență la preimagine, rezistență la a doua preimagine și rezistență la coliziuni.</p>
+  </template>
+
+  <template id="tpl-webografie">
+    <h2>Webografie</h2>
+    <ul>
+      <li>https://en.wikipedia.org/wiki/Claude_Shannon</li>
+      <li>https://en.wikipedia.org/wiki/Cryptography</li>
+      <li>https://www.eff.org/pages/cracking-des</li>
+      <li>https://crypto.stanford.edu</li>
+      <li>https://www.rsa.com/en-us</li>
+      <li>https://www.cloudflare.com/learning/cryptography/</li>
+      <li>https://en.wikipedia.org/wiki/History_of_cryptography</li>
+      <li>https://www.cryptomuseum.com</li>
+      <li>https://www.iacr.org</li>
+      <li>https://www.openssl.org/docs</li>
+    </ul>
+  </template>
+
+  <script>
+    // Simple hash-based client router
+    const routes = {
+      '': 'cover',
+      'cover': 'tpl-cover',
+      'toc': 'tpl-toc',
+      'argument': 'tpl-argument',
+      'capitol-1': 'tpl-capitol-1',
+      'capitol-2': 'tpl-capitol-2',
+      'capitol-3': 'tpl-capitol-3',
+      'webografie': 'tpl-webografie'
+    };
+
+    const navLinks = document.querySelectorAll('nav a');
+    function setActiveNav(route){
+      navLinks.forEach(a=>{
+        a.classList.toggle('active', a.getAttribute('data-route')===route);
+      });
+    }
+
+    function render(route){
+      const tplId = routes[route] || 'tpl-toc';
+      const tpl = document.getElementById(tplId);
+      const app = document.getElementById('app');
+      app.innerHTML = '';
+      app.appendChild(tpl.content.cloneNode(true));
+      setActiveNav(route);
+
+      // add pager
+      const pager = document.createElement('div');
+      pager.className = 'pager';
+      const order = ['cover','toc','argument','capitol-1','capitol-2','capitol-3','webografie'];
+      const idx = order.indexOf(route);
+      const prev = document.createElement('button'); prev.className='btn';
+      prev.textContent = '← Anterior';
+      prev.disabled = idx<=0;
+      prev.onclick = ()=> location.hash = '#'+order[Math.max(0,idx-1)];
+      const next = document.createElement('button'); next.className='btn';
+      next.textContent = 'Următor →';
+      next.disabled = idx<0 || idx>=order.length-1;
+      next.onclick = ()=> location.hash = '#'+order[Math.min(order.length-1,idx+1)];
+      pager.appendChild(prev);
+      pager.appendChild(next);
+      app.appendChild(pager);
+    }
+
+    function onHashChange(){
+      const raw = location.hash.replace('#','');
+      const route = raw || '';
+      render(route);
+    }
+
+    window.addEventListener('hashchange', onHashChange);
+    // initial render
+    if(!location.hash) location.hash = '#cover';
+    onHashChange();
+  </script>
+</body>
+</html>
+

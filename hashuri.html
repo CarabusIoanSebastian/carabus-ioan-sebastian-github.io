@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Capitolul 3 – Hashuri</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<header>
+
+<nav>
+  <a href="index.html">Acasă</a>
+  <a href="argument.html">Argumentare</a>
+  <a href="capitol1.html">Capitolul 1</a>
+  <a href="capitol2.html">Capitolul 2</a>
+  <a href="capitol3.html" class="active">Capitolul 3</a>
+  <a href="webografie.html">Webografie</a>
+</nav>
+
+</header>
+<body>
+<h1 class="page-title">Capitolul 3 – Hashuri</h1>
+<div class="content">
+    <p>În cadrul criptografiei moderne, un rol esențial îl ocupă funcțiile hash criptografice, instrumente matematice concepute pentru a transforma datele de orice lungime într-o amprentă digitală unică de lungime fixă. Aceste funcții nu realizează criptare propriu-zisă, ci oferă un mijloc sigur de verificare a integrității și autenticității informațiilor. Într-o lume digitală bazată pe miliarde de tranzacții, parole și fișiere, funcțiile hash reprezintă fundamentul securității informaționale.</p>
+    <h3>Definirea și proprietățile funcțiilor hash</h3>
+    <p>O funcție hash criptografică este o transformare matematică H care mapează o intrare de lungime arbitrară m într-o ieșire de lungime fixă <i>h</i>:</p>
+    <p><i>h=H(m)</i></p>
+    <p>Spre deosebire de criptare, procesul de hashare este unidirecțional: nu există nicio metodă practică de a obține mesajul original din valoarea hash. Din acest motiv, funcțiile hash nu sunt reversibile și nu necesită o cheie de decriptare.</p>
+    <p>O funcție hash criptografică sigură trebuie să îndeplinească următoarele proprietăți fundamentale:</p>
+    <ol>
+        <li><b>Rezistență la preimagine (preimage resistance)</b>– dat fiind un hash h, este imposibil din punct de vedere practic să se găsească un mesaj m astfel încât <i>H(m)=h</i></li>
+        <li><b>Rezistență la a doua preimagine (second preimage resistance)</b>– dat fiind un mesaj m1​, este imposibil să se găsească un alt mesaj m2​ diferit care produce același hash H(m1) ≠ H(m2)</li>
+        <li><b>Rezistență la coliziuni (collision resistance)</b>– este practic imposibil să se găsească două mesaje diferite m1≠m2 pentru care H(m1) ≠ H(m2)</li>
+    </ol>
+    <p>Aceste proprietăți asigură faptul că orice modificare, chiar și minimă, în mesajul original va produce o valoare hash complet diferită, fenomen cunoscut sub numele de efect de avalanșă.</p>
+    <h3>Rolul funcțiilor hash în criptografie</h3>
+    <p>Funcțiile hash nu oferă confidențialitate, ci integritate și autenticitate. Ele sunt utilizate pentru a verifica dacă un mesaj, un fișier sau o parolă nu a fost modificat sau corupt. Printre principalele aplicații se numără:</p>
+    <ul>
+        <li><b>Verificarea integrității datelor: </b>a descărcarea fișierelor software, se compară hash-ul publicat de dezvoltator cu cel generat local, pentru a detecta eventualele alterări;</li>
+        <li><b>Stocarea parolelor: </b>sistemele informatice nu salvează parolele în clar, ci doar hash-urile lor. Astfel, chiar dacă baza de date este compromisă, parolele rămân protejate;</li>
+        <li><b>Semnături digitale: </b>hash-ul unui document este semnat cu o cheie privată, ceea ce asigură autenticitatea și integritatea mesajului fără a fi nevoie de criptarea întregului conținut;</li>
+        <li><b>Blockchain și criptomonede: </b>funcțiile hash asigură legătura între blocuri și verificarea tranzacțiilor, garantând imuabilitatea registrului digital.</li>
+    </ul>
+</div>
+<footer>
+Proiect de atestat – Criptografia clasică
+</footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Capitolul 3 – Criptografia modernă</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+
+<nav>
+  <a href="index.html">Acasă</a>
+  <a href="argument.html">Argumentare</a>
+  <a href="capitol1.html">Capitolul 1</a>
+  <a href="capitol2.html">Capitolul 2</a>
+  <a href="capitol3.html" class="active">Capitolul 3</a>
+  <a href="webografie.html">Webografie</a>
+</nav>
+
+</header>
+
+<h1 class="page-title">Capitolul 3 – Criptografia modernă</h1>
+
+<div class="content">
+  <h2>Claude Shannon și teoria informației</h2>
+  <p><img src="claude.png"></p>
+  <p>După încheierea celui de-al Doilea Război Mondial, criptografia a intrat într-o nouă etapă. Dacă până atunci arta cifrării fusese dominată de mecanisme fizice, de intuiție și de experiment, începând cu anii 1940 aceasta a fost fundamentată pe principii matematice riguroase. Momentul definitoriu a fost reprezentat de lucrările inginerului și matematicianului american Claude E. Shannon (1916–2001), care a pus bazele teoriei informației și, odată cu ea, a criptografiei moderne.</p>
+  <h3><i>Contextul intelectual și contribuțiile lui Shannon</i></h3>
+  <p>laude Shannon, cercetător la Bell Laboratories, a devenit cunoscut prin lucrarea sa din 1948 intitulată “A Mathematical Theory of Communication”, publicată în Bell System Technical Journal. Această lucrare a definit pentru prima dată concepte precum entropia informațională, capacitatea canalului de comunicație și redundanța mesajului, oferind un cadru matematic unitar pentru analiza transmiterii și codificării informației.</p>
+  <p>Cu toate acestea, contribuțiile sale în domeniul criptografiei sunt anterioare acestui moment. În timpul războiului, Shannon a redactat un raport clasificat intitulat “A Mathematical Theory of Cryptography” (1945), în care a analizat pentru prima dată criptosistemele dintr-o perspectivă științifică, nu doar tehnică. Raportul a fost declasificat abia în 1949, sub titlul “Communication Theory of Secrecy Systems”. În această lucrare, Shannon a demonstrat că criptografia este o ramură a teoriei comunicațiilor, în care scopul nu este doar transmiterea informației, ci ascunderea semnificației acesteia</p>
+  <h3><i>Principiile fundamentale ale teoriei lui Shannon</i></h3>
+  <p>Shannon a introdus o serie de concepte esențiale, care stau și astăzi la baza securității informației:</p>
+  <ol>
+    <li><b>Entropia</b> - reprezintă o măsură a incertitudinii sau a informației conținute într-un mesaj. Cu cât entropia este mai mare, cu atât mesajul este mai greu de prezis sau de comprimat. În context criptografic, un cifru eficient trebuie să crească entropia aparentă a textului, făcându-l indistinct de zgomot aleatoriu.</li>
+    <li><b>Redundanța limbajului natural</b> - Shannon a arătat că limbile umane conțin redundanță, adică repetiții și structuri previzibile. Criptanaliza exploatează aceste regularități pentru a sparge cifruri. Astfel, scopul unui sistem de criptare este de a elimina aceste indicii din textul criptat.</li>
+    <li><b>Securitatea perfectă (Perfect Secrecy)</b> - Shannon a definit criteriul suprem al securității: un sistem este perfect sigur dacă probabilitatea de a deduce textul clar pe baza textului criptat este identică cu probabilitatea de dinaintea criptării. Cu alte cuvinte, criptograma nu oferă niciun avantaj informațional atacatorului.</li>
+  </ol>
+  <p>Singurul sistem care îndeplinește această condiție este One-Time Pad (OTP), propus anterior de Vernam și Mauborgne. Shannon a demonstrat matematic că OTP oferă securitate absolută, dar numai dacă sunt respectate trei condiții:</p>
+  <ul>
+    <li>cheia este complet aleatorie;</li>
+    <li>cheia are aceeași lungime ca mesajul;</li>
+    <li>cheia este utilizată o singură dată.</li>
+  </ul>
+  <h3><i>Impactul asupra criptografiei moderne</i></h3>
+  <p>Prin formalizarea acestor concepte, Claude Shannon a transformat criptografia dintr-o artă empirică într-o disciplină științifică. El a introdus ideea că securitatea unui sistem nu trebuie să depindă de secretul algoritmului, ci exclusiv de secretul cheii — un principiu cunoscut astăzi sub numele de Principiul lui Kerckhoffs.</p>
+</div>
+<button type="button" onclick="location.href='hashuri.html'">Pagina următoare</button>
+
+<footer>
+Proiect de atestat – Criptografia clasică
+</footer>
+</body>
+</html>

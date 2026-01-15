@@ -1,1 +1,1 @@
-Proiect de atestat 2026 - Criptografia clasica
+Proiect de atestat CNPRSV 2026 - Criptografia clasica
